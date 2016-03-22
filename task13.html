@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 01</title>
+  </head>
+<body>
+
+  <label>请输入周口今天空气质量：<input id="aqi-input" type="text">
+  </label>
+  <button id="button">确认填写</button>
+
+  <div>您输入的值是：<span id="aqi-display">尚无录入</span>
+  </div>
+
+<script type="text/javascript">
+
+    (function() {
+  /*	
+  在注释下方写下代码
+  给按钮button绑定一个点击事件
+  在事件处理函数中
+  获取aqi-input输入的值，并显示在aqi-display中
+  */
+        var btn=document.getElementById('button');
+        var display=document.getElementById('aqi-display');
+        var input=document.getElementById('aqi-input');
+        btn.onclick=function(){
+            var aqi=input.value;
+            //判断是否有空格
+            if (aqi.indexOf(" ") >=0) 
+              alert("输入有空格!");
+            //判断输入的値是否为number
+            else if(isNaN(aqi)|| aqi.length<=0){
+                alert("空气质量値为数字不能是其他类型")
+            }else {
+                display.textContent=aqi;
+            }
+        }
+
+    })();
+
+</script>
+</body>
+</html>
