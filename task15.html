@@ -77,7 +77,7 @@ function render(data) {
   var util=['一','二','三','四','五','六','七','八','九'];
   var resortli="";
   var resort=document.getElementById('resort');
-   for(var i=0;i<data[i].length;i++){
+   for(var i=0;i<data.length;i++){
    	resortli+="<li>第"+util[i]+"名："+data[i][0]+"空气质量：<b>"+data[i][1]+"</b></li>";	
    }
    resort.innerHTML=resortli;
