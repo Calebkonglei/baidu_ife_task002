@@ -94,7 +94,10 @@ h6 {
 }
 
 p {
-  margin: 10px 0 15px 0;
+  margin:10px auto;
+  font-size:2em;;
+  font-weight:bold;
+  padding:5px;
 }
 
 footer p {
