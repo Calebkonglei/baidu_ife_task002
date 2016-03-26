@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title>task18</title>
+	<style type="text/css">
+     *{
+     	margin:0;padding:0;
+     }
+     #txt{
+     	width:200px;
+     	height:50px;
+
+        line-height: 50px;
+        font-size: 1rem;
+     }
+     #txt:focus{
+        box-shadow: 1px 1px 2px black;
+     }
+     button{
+     	width:70px;
+     	height:50px;
+     	font-size: 1em;
+     }
+     #left-out{
+     	margin-left:30px;
+     }
+     span{
+     	display: inline-block;
+        min-width:50px; 
+     	height:50px;
+     	line-height: 50px;
+     	background-color: red;
+     	margin:10px;
+     	box-shadow: 0 0 5px black;
+     	text-align: center;
+     	font-size: 1em;
+     	color: #fff;
+     	padding:0 5px 0 5px;
+     }
+	</style>
+</head>
+<body>
+  
+    <form>
+      <input type="text" name="value" id="txt" placeholder="请输入数字"/>
+      <button id="left-in">左侧入</button>
+      <button id="right-in">右侧入</button>
+      <button id="left-out">左侧出</button>
+      <button id="right-out">右侧出</button>
+    </form>
+  <div id="container">
+
+  </div>
+  <script src="task18.js"></script>
+
+
+</body>
+</html>
