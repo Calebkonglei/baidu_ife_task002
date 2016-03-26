@@ -10,15 +10,15 @@
 			evt.queue.push(num);
 			evt.render();
 		},		
-		pop:function(){ //左侧出
+		shift:function(){ //左侧出
 			if(evt.queue.length===0){
 				alert("元素已经删空");
 				return false;
 			}
-			alert(evt.queue.unshift());
+			alert(evt.queue.shift());
 			evt.render();
 		},
-		shift:function(){  //右侧出			
+		pop:function(){  //右侧出			
 			if(evt.queue.length===0){
 				alert("元素已经删空");
 				return false;
@@ -26,7 +26,7 @@
 			alert(evt.queue.pop());
 			evt.render();
 		},
-		del:function(num){  //删除指定的元素
+		remove:function(num){//删除指定元素
 			evt.queue.splice(num,1);
 			evt.render();
 		},
@@ -36,33 +36,34 @@
 			for(var i=0;i<len;i++){
 				html.push('<span>'+evt.queue[i]+'</span>');
 			};
-            container.innerHTML=html.join('');
-            evt.Event();
-		},
-		Event:function(){  //元素点击删除事件
+            container.innerHTML=html.join(''); 
+            Event();
+		}
+		
+	}
+    function Event(){  //元素点击删除事件
 		var span=container.getElementsByTagName("span");
 		for(var i=0;i<span.length;i++){
-			 (function(m) {
-                    span[m].addEventListener('click', function() {
-                        sequence.remove(m)
-                    })
-                })(i)
-		    }
-	}
- }
-	
-	
+              span[i].onclick=function(i) {
+                        return function(){
+                        	return evt.remove(i)
+                        }
+                    }(i)
+		    }	
+		}
+
 	var data=document.getElementById("txt");
 	var btn=document.querySelectorAll("button");
 	//左入，
-	btn[0].onclick=function(){
+	btn[1].onclick=function(){
 		var num=data.value;
 		if(!(/^\d+$/.test(num))){
 			alert("请输入正确的整数！");
 		}
 		else evt.push(num);
 	}
-	btn[1].onclick=function(){
+	
+	btn[0].onclick=function(){
 		var num=data.value;
 		if(!(/^\d+$/.test(num))){
 			alert("请输入正确的整数！");
@@ -71,4 +72,4 @@
 	}
 	btn[2].onclick=function(){evt.shift();};
 	btn[3].onclick=function(){evt.pop();};
-
+    
