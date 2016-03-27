@@ -23,7 +23,7 @@ var evt={ //事件
 				return false;
 			}
 			alert(queue.shift());
-			Event();
+			evt.render();
 			
 		},
 		pop:function(){  //右侧出			
@@ -78,9 +78,7 @@ var evt={ //事件
             var result = txtTarget(area.value);
             for (var i = 0; i < result.length; i++) {
                 queue.push(result[i]);
-                var span = document.createElement("span");
-                span.innerHTML = result[i];
-                container.appendChild(span);
+                evt.render();
             }
         } else {
             alert("输入不能为空！");
@@ -91,16 +89,14 @@ var evt={ //事件
 	btn[3].onclick=function(){evt.pop();};//右出 
 	//添加查询事件
 	btn[4].onclick=function(){
-		var pos,
-            i,
-            j;
+		var pos,i,j;   
         if (input.value !== "") {
             var find = input.value.replace(/[^\d\u4e00-\u9fa5a-zA-Z]+/g, " ").split(" ");
             for (i = 0, len = find.length; i< len; i++) {
                 for (j = 0, l = queue.length; j < l; j++) {
                     pos = queue[j].search(find[i]);
                     if (pos >= 0) {
-                        span[j].style.background = "yellow";
+                        span[j].style.background = "blue";
                     }
                 }
             }
