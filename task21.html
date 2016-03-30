@@ -1,0 +1,78 @@
+<html>
+<head>
+	<title>task21</title>
+	<style type="text/css">
+       *{
+       	margin:0;padding:0;
+       }
+
+       div{
+       	border:1px solid black;
+       	box-sizing:border-box;
+       }
+
+       #root ,.granch,.leaves{
+       	display: flex;
+       	display: -webkit-flex;
+       	flex-direction:row;
+       	justify-content:center;
+       	align-items:center;
+       	margin:10px;
+       }
+       #root{
+       	margin:20px auto;
+       	width:50%;
+       	height:40%;
+        box-shadow: 2px 3px 5px #ccc,2px 0 5px #000;
+       }
+       .granch{
+       	width:50%;
+       	height:80%;
+
+       }
+       .leaves{
+       	width:45%;
+       	height:80%;
+       }
+       .son{
+       	width:40%;
+       	height:80%;
+       	margin:5px;
+       }
+ p{
+ 	width:25%;
+ 	margin:20px auto;
+ }
+	</style>
+</head>
+<body>
+  <div id="root">
+     <div class="granch">
+        <div class="leaves">
+           <div class="son"></div>
+           <div class="son"></div>
+        </div>
+        <div class="leaves">
+           <div class="son"></div>
+           <div class="son"></div>
+        </div>
+     </div>
+     <div class="granch">
+        <div class="leaves">
+           <div class="son"></div>
+           <div class="son"></div>
+        </div>
+        <div class="leaves">
+           <div class="son"></div>
+           <div class="son"></div>
+        </div>
+     </div>
+  </div>
+  <p>
+  <button id="pre">先序遍历</button>
+  <button id="mid">中序遍历</button>
+  <button id="post">后序遍历</button>
+</p>
+<script src="task21.js"></script>
+</body>
+</html>
