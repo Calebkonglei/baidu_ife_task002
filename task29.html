@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      Task 29
+    </title>
+    <style type="text/css">
+      form{
+        display: block;
+        margin:50px auto;
+      }
+      #text{
+        width:300px;
+        height:40px;
+        border: 3px solid #fff;
+        border-radius: 5px;
+      }
+      span{
+        display: inline-block;
+        width:80px;
+        height:40px;
+        line-height: 40px;
+        text-align: center;
+        background-color: green;
+        box-shadow: 1px 1px 3px black;
+        color: #fff;
+        cursor:pointer;
+      }
+      span:hover{
+        background-color: #fff;
+        color:#000;
+      }
+      #tip{
+        color:#ccc;
+        margin-left: 30px;
+      }
+    </style>
+  </head>
+  <body>
+      <form>
+          名称
+          <input id='text' type="text" autofocus="autofocus"/>
+          <span id="vote">验证</span>
+          <p id="tip">必填，长度为4~16个字符</p>
+      </form>
+      <script type="text/javascript">
+        var txt=document.getElementById('text');
+        var btn=document.getElementById('vote');
+        var tip=document.getElementById('tip');
+        
+        function validate(){
+          var msg=txt.value;
+           if(txtlength(msg)==0){
+              tip.textContent="姓名不能为空";
+              txt.style.borderColor='red';
+              tip.style.color="red";
+           }
+           else if(txtlength(msg)>3&&txtlength(msg)<17){
+              tip.textContent="格式正确";
+              txt.style.borderColor="green";
+              tip.style.color="green";
+           }else{
+              tip.textContent="字符数应该在4~16范围内";
+              txt.style.borderColor="red";
+              tip.style.color="red";
+           }
+        }
+        function txtlength(values){
+            var str=0;
+            for(var i=0,l=values.length;i<l;i++){
+              var c = values.charCodeAt(i);
+              if((c>=0x0001&&c<=0x007e)||(0xff60<=c&&c<=0xff9f))
+                str++;
+              else
+                 str+=2;
+            }
+            return str;
+        }  
+        btn.onclick=function(){
+            validate();
+        }
+      </script>
+  </body>
+</html>
