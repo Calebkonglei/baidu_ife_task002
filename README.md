@@ -60,4 +60,12 @@ http://dannisi.github.io/baidu_ife_task002/task20.html
 当前被遍历到的节点做一个特殊显示（比如不同的颜色）
 每隔一段时间（500ms，1s等时间自定）再遍历下一个节点
 http://dannisi.github.io/baidu_ife_task002/task22.html
+#任务二十九：表单（一）单个表单项的检验
+任务描述
 
+如示例图中所示，在页面中实现一个输入框与按钮，要求点击验证按钮后，对输入框中内容进行格式校验，并在其下方显示校验结果
+校验规则：
+1.字符数为4~16位
+2.每个英文字母、数字、英文符号长度为1
+3.每个汉字，中文符号长度为2
+http://dannisi.github.io/baidu_ife_task002/task29.html
