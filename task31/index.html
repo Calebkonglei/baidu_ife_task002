@@ -1,0 +1,78 @@
+<html>
+<head>
+	<title>task31</title>
+	<style type="text/css">
+      #container{
+      	width:500px;
+      	margin:100px auto;
+      }
+      #radio{
+      	width:300px;
+      	margin:20px auto;
+      }
+      #radio input{
+      	margin:0 20px;
+      }
+
+      #selec{
+      	width:480px;
+      	margin:20px auto;
+
+      }
+      #selec select{
+      	width:150px;
+      	height:35px;
+      	margin:20px;
+	    border-radius: 5px;
+      }
+
+      #selec #area{
+      	margin-left: 30px;
+      }
+      #work{
+      	width:480px;
+      	margin:40px auto;
+        display: none;
+      }
+      #work input{
+      	width:345px;
+      	height:35px;
+      	border: 1px solid #CDCDCD;
+	    border-radius: 5px;
+	    font-size: 25px;
+	    padding:10px;
+      }
+	</style>
+</head>
+<body>
+	<div id="container">
+        <form mothod="post" action="">
+   	         <div id="radio">
+                <input type="radio" name="radio" id="inschool" checked/>在校生
+                <input type="radio" name="radio" id="outschool" />非在校生
+   	         </div>
+
+         <div id="selec">
+           <label for="">学校</label>
+           <select id="area">
+            
+             <option>北京</option>
+             <option>上海</option>
+             <option>杭州</option>
+           </select>
+           <select id="school">
+             <option>北京大学</option>
+           </select>
+        </div>
+       <div id="work">
+           工作单位
+           <input type="text" />
+        </div>
+
+    
+       </form>
+	</div>
+  
+</body>
+<script src="task31.js"></script>
+</html>
