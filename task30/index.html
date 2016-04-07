@@ -1,0 +1,65 @@
+<html>
+<head>
+	<title>task30</title>
+	<style type="text/css">
+	table{
+		margin:50px auto;
+	}
+	table tr td:first-child{
+     	vertical-align: top;
+     }
+     table tr td input{
+     	width:400px;
+       	height:40px;
+       	border-radius: 5px;
+       	border:1px solid #ccc;
+     }
+
+     table tr td:last-child span{
+     	display: block;
+     }
+     #submit{
+     	display: block;
+        width:80px;
+        height:40px;
+        line-height: 40px;
+        background-color: blue;
+        text-align: center;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 220px;
+     }
+	</style>
+</head>
+<body>
+    <form method="post" action="">
+		<table>
+			<tr>
+				<td><label for="names">名称</label></td>
+				<td><input type="text" placeholder="请输入名称" id="names"><span id="name"></span></td>
+			</tr>
+			<tr>
+				<td><label for="password">密码</label></td>
+				<td><input type="password" placeholder="请输入密码" id="password"><br /><span id="passwordWarn"></span></td>
+			</tr>
+			<tr>
+				<td><label for="password-again">密码确认</label></td>
+				<td><input type="password" placeholder="请再次输入密码" id="password-again"><br /><span id="againWarn"></span></td>
+			</tr>
+			<tr>
+				<td><label for="email">邮箱</label></td>
+				<td><input type="text" placeholder="请输入电子邮箱" id="email"><br /><span id="emailWarn"></span></td>
+			</tr>
+			<tr>
+				<td><label for="phone">手机</label></td>
+				<td><input type="text" placeholder="请输入手机号码" id="phonenumber"><br /><span id="phoneWarn"></span></td>
+			</tr>											<tr>
+				<td></td>
+				<td><span id="submit">提交</span>
+			</tr>
+		</table>
+	</form>
+    <script src="task30.js"></script>
+</body>
+</html>
