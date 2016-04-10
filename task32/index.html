@@ -1,0 +1,68 @@
+
+<html>
+<head>
+	<title>task32</title>
+	<style type="text/css">
+	*{
+		font-family: "黑体";
+	}
+	#txt{
+		margin-top: 10px;
+		display: block;
+		width:80px;
+		height:50px;
+		line-height: 50px;
+		background-color: blue;
+		border-radius: 5px;
+		box-shadow: 2px 2px 2px #000;
+		text-align: center;
+        color: #fff;
+        cursor:pointer;
+	}
+	#txt:hover{
+		box-shadow:-1px -1px 1px #000; 
+	}
+	table{
+		margin:50px auto;
+	}
+	table tr td:first-child{
+     	vertical-align: top;
+     }
+     table tr td input{
+     	width:400px;
+       	height:40px;
+       	border-radius: 5px;
+       	border:1px solid #ccc;
+     }
+
+     table tr td:last-child span{
+     	display: block;
+     }
+     #submit{
+     	display: block;
+        width:80px;
+        height:40px;
+        line-height: 40px;
+        background-color: blue;
+        text-align: center;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 220px;
+     }
+	</style>
+</head>
+<body>
+    <form method="post" action="">
+    	<input type="checkbox" value="名称" id="namelist"/>名称
+    	<input type="checkbox" value="密码" id="passwordlist"/>密码
+    	<input type="checkbox" value="邮箱" id="emaillist"/>邮箱
+    	<input type="checkbox" value="手机" id="phonelist"/>手机
+    	<span id="txt">生成表单</span>
+		<table>
+			
+		</table>
+	</form>
+    <script src="task32.js"></script>
+</body>
+</html>
