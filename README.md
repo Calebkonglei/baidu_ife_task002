@@ -88,3 +88,21 @@ http://dannisi.github.io/baidu_ife_task002/task30/index.html
 学校下拉菜单里的学校名单均为城市下拉菜单中所选的城市中的大学，当城市发生变化时，学校一起发生变化
 城市及学校的数据随意编造即可，无需真实完整
 http://dannisi.github.io/baidu_ife_task002/task31/index.html
+#任务三十二：表单（四）实现表单自动生成工厂
+任务描述
+
+实现以JavaScript对象的方式定义表单及验证规则
+表单配置参考示例如下：（不需要一致，仅为参考）
+
+    {
+        label: '名称',                    // 表单标签
+        type: 'input',                   // 表单类型
+        validator: function () {...},    // 表单验证规
+        rules: '必填，长度为4-16个字符',    // 填写规则提示
+        success: '格式正确',              // 验证通过提示
+        fail: '名称不能为空'               // 验证失败提示
+    }
+    
+基于该配置项，实现一套逻辑，可以自动生成表单的展现、交互、验证
+使用你制作的表单工厂，在一个页面上创建两套样式不同的表单。
+http://dannisi.github.io/baidu_ife_task002/task32/index.html
