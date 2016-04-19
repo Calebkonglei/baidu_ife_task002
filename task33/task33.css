@@ -1,0 +1,72 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-family: "Helvetica Neue", "Hiragino Sans GB", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 16px;
+}
+table.chessboard-bg {
+  text-align: center;
+}
+table.chessboard-bg tr td {
+  width: 50px;
+  height: 50px;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+table.chessboard-bg tr td:first-child {
+  border-bottom: none;
+  border-right: 2px solid #555;
+}
+table.chessboard-bg tr td:last-child {
+  border-right: 2px solid #555;
+}
+table.chessboard-bg tr:first-child td {
+  border-bottom: 2px solid #555;
+  border-right: none;
+}
+table.chessboard-bg tr:first-child td:first-child {
+  border-bottom: none;
+}
+table.chessboard-bg tr:last-child td {
+  border-bottom: 2px solid #555;
+}
+table.chessboard-bg tr:last-child td:first-child {
+  border-bottom: none;
+}
+#chess {
+  background-color: #f00;
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+#chess.left {
+  border-left: 15px solid #00f;
+}
+#chess.right {
+  border-right: 15px solid #00f;
+}
+#chess.bottom {
+  border-bottom: 15px solid #00f;
+}
+#chess.top {
+  border-top: 15px solid #00f;
+}
+.control-area {
+  margin-left: 50px;
+}
+.control-area input {
+  font-size: 16px;
+  margin: 5px;
+}
