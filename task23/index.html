@@ -1,0 +1,133 @@
+<html>
+<head>
+	<title>task23</title>
+	<style type="text/css">
+body,div,span,button{
+	margin:0;
+	padding:0;
+}
+div{
+	outline: 1px solid black;
+	margin:10px;
+}
+#root,#granch-1,#granch-2,#granch-3,#apple,#human,#program{
+	display: flex;
+	display: -webkit-flex;	
+	justify-content:flex-end;
+	
+}
+#root{
+	width:98%;
+	height:400px;
+	margin:20px 10px;
+	flex-direction:row;
+	align-items:baseline;
+}
+#granch-1,#granch-2{
+	width:50%;
+	height:70%;
+	flex-direction:row;
+	margin-top: 50px;
+}
+#granch-3{
+	width:70px;
+	height:70px;
+}
+#apple{
+   width:100%;
+   height:80%;
+   flex-wrap:wrap;
+}
+#apple>div{
+	width:20%;
+	height:20%;
+}
+#granch-2> div{
+width:60%;
+height:70%;
+margin-top: 20px;
+}
+#human>div{
+width:40%;
+height:50%;
+margin-top: 30px;
+}
+#program>div{
+	width:40%;
+	height:50%;
+	margin-top: 30px;
+}
+#txt{
+	margin-left: 35%;
+
+}
+	</style>
+</head>
+<body>
+  <div id="root">
+   Supper
+    <div id="granch-1">
+    Cat        
+    <div id="apple">
+        Apple            
+    <div class="children">
+             Pear
+    </div>
+             <div class="children">
+             pig
+             </div>
+             <div class="children">
+             cola
+             </div>
+             <div class="children">
+             Soccer
+             </div>
+             <div class="phone">
+             phone
+             </div>
+             <div class="children">
+             book
+             </div>
+             <div class="children">
+                  School     
+             </div>
+        </div>
+    </div>
+
+    <div id="granch-2">
+        note     
+        <div id="human">
+             human     
+             <div class="children">
+                  code     
+             </div>
+             <div class="children">
+                  operate     
+             </div>
+             <div class="children">
+                  man     
+             </div>
+        </div>
+        <div id="program">
+            progarm    
+             <div class="bement">
+                 bement    
+             	<div class="children">
+                 cat    
+             </div>
+             </div>             
+             <div class="children">
+                 goss    
+             </div>            
+        </div>
+    </div>
+    <div id="granch-3">             	
+           fish    
+    </div>
+  </div>
+  <input type="text" name="values" placeholder="输入你想查询的値" id="txt"/>
+  <button id="shendu">深度优先遍历</button>
+  <button id="guangdu">广度优先遍历</button>
+  <script src="task22.js"></script>
+</body>
+</html>
